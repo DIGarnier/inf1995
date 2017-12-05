@@ -1,0 +1,78 @@
+#Choregraphie
+dbt;		# debut
+sgo 64;		# joue une sonorite
+att 100;
+sar;		# arrete de jouer la sonorite
+trd;		# tourne a droite
+trg;		# tourne a gauche
+dbc 4;		# boucle 4 fois
+dal 1;		# allumer la DEL #1
+att 10;
+det 1;		# ferme la DEL #1
+att 10;
+fbc;
+mav 255;	# avance avec une force de 255/255
+att 200;
+mar;		# arrete d'avancer
+mre 255;	# recule avec une force de 255/255
+att 200;
+mar;		# arrete de reculer
+trg;		# tourne a gauche
+att 100;
+trd;		# tourne a droite
+dbc 3;		# boucle 3 fois, joue différentes sonorites
+sgo 50;
+att 200;
+sgo 55;
+att 200;
+sgo 60;
+att 200;
+sgo 65;
+att 200;
+fbc;
+dal 1;		# allumer la DEL #1
+att 100;
+det 1;		# ferme la DEL #1
+sgo 76;		# GoT
+att 42;
+sgo 69;
+att 42;
+sgo 72;
+att 7;
+sgo 74;
+att 7;
+sgo 76;
+att 28;
+sgo 69;
+att 28;
+sgo 72;
+att 7;
+sgo 74;
+att 7;
+sgo 71;
+att 14;
+sgo 64;
+att 14;
+sgo 67;
+att 7;
+sgo 69;
+att 7;
+sgo 71;
+att 14;
+sgo 64;
+att 14;
+sgo 67;
+att 7;
+sgo 69;
+att 7;
+sgo 71;
+att 14;
+sgo 64;
+att 14;
+sgo 67;
+att 7;
+sgo 69;
+att 7;
+sgo 71;
+att 14;		# Fin GoT
+fin; 		#FIN

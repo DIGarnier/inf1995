@@ -1,0 +1,88 @@
+
+----Défi----
+
+- Présentation défi
+	- Détection
+	- Récuperer les insects PAR chemin le plus court
+	- Sortir de la toile
+
+- Système de référence à 8 directions permet entre autre de créer une matrice 17x8 décrivant l'avoisinage de chaque noeuds.
+	- Chaque ligne de cette matrice fait référence a un noeud particulier et une colone à une direction données.
+- Karl -> Système de référence déterminé par orientation initale du robot
+	   -> détecte ligne avec interrupt
+	   -> l'objet détecté peut être classifié par nb ligne et s'il est présentement sur une ligne
+       -> détection selon deux paires de rayons ( diag et droit )
+
+	   -> positions insectes = trouver le chemin le plus court les reliant avec l'algo. de Dijkstra + permutation ordonnées
+	   -> index du voisins détermine coût avec matric de coûts.
+
+	   -> Noeuds à noeuds
+			- prochain déplacement déterminé par orientation relative de la cible par rapport à Karl ( système de référence relatif à Karl)
+
+	   -> Trouver la sortie potentielle la plus proche avec Djikstra, s'y rendre.
+	   -> Une fois sortie identifiée, Karl corrige sa position et son orientation pour etre en accord avec la réalité, puis sort de la toile.
+
+
+----Équipe----
+
+- Trello comme méthode d'organisation virtuelle
+	-> Fonctionne sur le modèle Kanban
+			- par exemple... (explique le suivi d'une tâche jusqu'à son accomplisement)
+
+- Le quart du temps alloué au projet a été consacré à l'analyse et la conception de l'architecture.
+
+- Chaque semaine l'équipe se réunissait deux fois, extraordinairement trois. Mardi pour le code review, vendredi pour le pair programming et
+	la rencontre extraordinaire était le mercredi au besoin. 
+
+
+- Conclusion avec mention de l'utilisation d'un réseau de communication décentralisé démontré par code review, etc 
+
+
+----Matériel----
+
+- Énumération 
+    -> Capteur de distance est la verticale car docu, est sur PortA pour accès au CAN
+	-> Piezo #2, utilise le même compteur que lors de l'identification de la sortie, accès au compteur.
+	-> Roues, PWM du timer1(16bits)
+	-> Piezo #1, placé pour l'accès à un compteur.
+	
+
+----Logiciel----
+
+- Makefile
+	-> Permet la compilation de plusieurs exécutables dans un même projet.
+	-> Effectue la compilation et la programmation du robot en une seule commande.
+	-> Affiche les différentes étapes du processus.
+
+- Architecture logicielle
+	-> Utilisation de namespace pour simuler des classes tout en minimisant l'empreinte mémoire.
+		- Certains namespaces utilise des fonctions pour initialiser le matériel.
+	-> Énumération et brève explication des namespaces.
+
+
+----Difficulté----
+
+- Détection du cylindre
+	-> Prendre une seule valeur comme seuil de détection est problématique. La géométrie du cylindre faisait en sorte
+	   que les premières lectures avant une certaine position étaient abhérantes.
+	-> Pour palier à ce problème nous faisons 10 moyennes sur 100 lectures chaques et prennons la valeur la plus proche du robot.
+
+- Mesure d'une distance donnée change avec le voltage fourni à la carte mère.
+	-> distance apparante plus loin en fonction de l'épuisement de la batterie 9V.
+	-> S'assurer d'avoir une batterie neuve pour l'épreuve finale et de refaire la calibration au besoin.
+
+- Angle d'approche pour tester la sortie
+	-> Nous avons constaté que Karl ne pouvait pas identifier la sortie s'il arrivait perpendiculairement à celle-ci.
+	-> Pour palier à ca problème, le robot passe à l'intérieur s'il se trouve sur le carré extérieur, arrivant de face à 
+	   la sortie à tout coup.
+
+- Karl recule sans savoir explicitement comment !!!
+	-> En testant un certain tracé, il arrivait que Karl reculait lorsqu'il voulait tester une sortie.
+	-> Rapidement, nous avons trouvé la source du problème, elle provenait d'une reconfiguration du PortD,
+	   par la fonction qui met le robot en attente.
+
+
+
+
+
+

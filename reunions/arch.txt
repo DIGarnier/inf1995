@@ -1,0 +1,70 @@
+﻿
+
+1.Séquence de détection
+
+-Deux rayons, intérieur et extérieur, à déterminer expérimentalement.
+-Assume direction robot fait face à A et 1
+-Rotation sens horaire
+-Tourner automatiquement 
+-Augmenter compteur ligne au rising edge (toggle un bool) 
+-Gérer manuelement la détection de la ligne noire.
+-Enregistrer les détections dans un tableau de 'char'.
+
+2.Séquence del et son
+
+-Fonction void indépendante s'occupant seulement du son et de la del.
+-La fonction s'attend à recevoir un booleen pour indiquer si la zone est interieure et allumer la del appropriée.
+
+3.Optimisation de trajet
+-Fonction void prenant deux tableaux en entrée par pointeur, un 
+tableau 'pointsAVisiter' de taille 5 et un autre, de taille 20 nommé 'chemin', .
+
+void optimisation(const char pointsAVisiter[5],char chemin[20], uint8& nbNoeuds);
+
+4.Parcourir séquence de noeuds
+4.1. Noeud à Noeud
+	-Fonction void prenant deux 'char's en entrée: currentPos, nextPos et un uint8_t en référence
+	 déterminant l'orientation.
+	-Avec l'information fournie, elle appel les fonctions appropriées pour se rendre à nextPos.
+	-Le robot s'arrête lorsque son nez atteint l'intersection.
+
+4.2. Fonctions de déplacements.
+	-Fonctions void sans paramètres, par exemple, avancer(s'arrete quand intersection ou blanc), 
+	tournerA...(param bool)
+
+4.3. Fonctions est insecte.
+	-Retourne un bool, prend un tableau d'insecte trouvés et PositionCourante.
+	bool estInsecte(const char insecte[5], char PositionCourante);
+
+5. Trouver et prendre la bonne sortie.
+5.1 Trouver sortie potentielle la plus proche 
+	-Appeler "rouage interne d'optimisation" avec les 4 sorties et prendre la plus proches.
+
+5.2 Appeler "Noeud à Noeud"
+5.3  void atteindreSortie(char& PositionCourante, uint8_t& direction);
+	-S'oriente vers l'extérieur.
+	-Partir la minuterie.
+	-Avancer
+	-Tester pour 'pattern'
+	-Vérifier si la minuterie > temps à déterminer si oui on est à E. -> on est sortie !!
+	else -> Changer sa direction et sa position et appeler Noeud à Noeud avec:(Écrire les 3 séquences pour sortir)
+	-> sortir
+
+
+6. Jouer musique 2 piezos
+	void musiqueFinale();
+	-Modifier 'son.h et .cpp' pour supporter 2 piezos.
+
+7. Changement mécanique
+	-Fixer le 2eme piezo sur le robot (à une place appropriée).
+	-Changer orientation du capteur de distance.
+
+
+
+
+
+
+
+
+
+

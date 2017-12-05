@@ -1,0 +1,92 @@
+
+
+
+
+Quel est le défi?
+- Détecter les insectes sur la toile
+- Récupérer les insectes par le chemin le plus court
+- Sortir de la toile
+
+Nos solutions:
+- Détection s'effectuant à l'aide de deux paires de rayons.
+- Système de référence basé sur une rose des vents.
+- Calcul du chemin optimal avec l'algorithme de Dijkstra et par permutations ordonnées.
+- Déplacement du robot en fonction de son orientation relative à sa destination.
+- Réutilisation de la même machinerie pour toutes les navigations.
+- Réorientation du robot après l'identification d'une sortie potentielle.
+
+
+
+------------ Organisation équipe  ---------------------
+
+
+Schéma de réseau décentralisé
+Réseau de communication décentralisé
+
+Capture d'écran de Trello
+Outil d'organisation suivant le modèle Kanban
+
+Nos méthodes d'organisation:
+- Beaucoup de temps consacré à l'analyse et organisation de la tâche.
+- Plusieurs type de réunions:
+	- code review
+	- pair programming
+	- extraordinaire
+
+
+----------------  Matériel ------------------------
+
+Schéma de config. des ports
+PortA 
+- Capteur de ligne 1-6
+- Capteur de distance(installé à la verticale selon la documentation) 7
+- Alimentation du capteur de ligne sur VCC et GROUND
+
+PortB
+- Del 1-2
+- Deuxième piezo(inutilisable lors de l'identification de la sortie) 3-4
+- Réservé pour la communication usb 5-8 
+
+PortC
+- LCD utilisé lors du débogage 1-8
+
+PortD
+- Direction gauche 3
+- PWM gauche 5
+- Direction droite 4 
+- PWM droite 6
+- Premier piezo 7-8
+
+----------------- Logiciel -----------------------
+ 
+Capture d'écran du résultat sur console du Makefile
+Aperçu du processus d'installation du programme sur le robot
+
+Diagramme pseudoUML contenant namespace et liens logiques entre eux avec Karl.
+Architecture logicielle
+
+Fonctionnement du logiciel:
+- Initialisation du matériel par fonctions dédiées et vérification imposée par système d'exceptions.
+- Makefile polyvalent facilitant la compilation et l'installation du programme en une seule commande.
+- Clever Code?????????
+
+
+----------------- Difficultés ---------------------
+
+Graphe Distance donnée en fonction du voltage
+Valeur perçue d'une distance donnée en fonction du voltage.
+
+Schéma de la détection d'un cylindre
+""
+Quelques problèmes rencontrées:
+- Angle d'approche lors du test de la sortie.
+- Karl développe un mécanisme de marche arrière??
+
+
+
+
+
+
+
+
+

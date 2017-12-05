@@ -1,0 +1,52 @@
+maintenant, parlons de quelques épreuves que nous avons eux  surmonter!  
+
+Par sa forme cylindrique, l'insecte se fait difficile à détecter pour notre Karl,  
+en effet, la première lecture que Karl fait d'un insect se trouve à être une mesure  
+abhérante, c'est le trait en rouge que vous voyez juste ici. Plus précisément, cette 
+lecture fait apparaitre un insecte se trouvant sur le carré intérieur comme étant sur 
+celui extérieur. Afin de dôter Karl d'une détection parfaite, nous le faisons prendre 
+10 moyennes consécutives de 100 lectures chaques et prennons la moyenne obtenue étant 
+la plus proche du robot, qui devrait représenter une lecture plus proche de la lecture 
+voulue, celle marqué d'un trait vert sur le schéma. 
+ 
+ 
+Loin d'être le dernier problème que Karl a du outrepasser, la variabilité de la distance 
+percu à une même distance donnée en fonction de l'épuisement de la batterie a été, elle  
+aussi une difficulté significative:. En d'autre mots, plus la batterie faibli et plus Karl 
+détecte les insectes comme étant loins de lui. La solution à ce problème n'a pas été  
+très technologique, nous avons seulement décider de ce munir de batteries neuves pour  
+effectuer les tests critiques, l'épreuve finale et de recalibrer les rayons de  
+détection au besoin. 
+ 
+ 
+Une autre difficulté rencontré a été l'angle d'approche pour tester la sortie potentielle.
+Nous avons constaté que Karl ne pouvait pas identifier fiablement la sortie s'il 
+arrivait perpendiculairement à celle-ci. Pour palier à ce problème, nous faisons passer 
+le robot vers le carré intérieur s'il se trouve sur celui extérieur au moment ou il doit trouver 
+la sortie la plus proche, de ce fait, il arrive face à la sortie à tout coups. 
+ 
+ 
+Terminons avec le bogue le plus inusité, lors d'une séance de tests, nous donnions 
+des tracés quelconques à Karl et sur l'un d'eux, Karl se mit à reculer sans avoir été 
+programmé explicitement pour le faire! Le pire, c'est qu'il suivait bien la ligne au  
+reculons! Rapidement, nous avons fait le tour des hypothèses et trouvé le coupable. 
+La source du problème se trouvait dans une reconfiguration du PortD par la fonction de 
+mise en attente du robot, alors, maintenant, cette fonction sauvegarde l'état du PortD 
+avant la mise en attente et le restaure par la suite! 
+ 
+ 
+Finalement, je crois pouvoir dire au nom de toute l'équipe que nous avons aimé le défi que  
+représentait ce projet. Monter une architecture, aussi simple soit-elle, devant faire 
+autant avec si peux à été un énorme apprentissage pour chacun de nous!  
+ 
+On voudrait donc remercier Jérome et son équipe pour avoir trouvé un si beau défi. 
+On voudrait aussi spécialement remercier Philippe Carphin pour son dévouement envers  
+TOUS les étudiants du cours INF1995 et aussi pour les quelques leçons de vies qu'il nous à donné. 
+ 
+ 
+ 
+File contents are unchanged.
+18 file changes in working directory
+View changes
+commit:d2c7be
+

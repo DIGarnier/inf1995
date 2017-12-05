@@ -1,0 +1,5 @@
+- Découpage des tâches
+
+- Si on fait une nouvelle fonction, la mettre dans TODO sur Trello.
+
+- 

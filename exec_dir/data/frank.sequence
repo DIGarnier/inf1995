@@ -1,0 +1,29 @@
+// commentaire
+% commentaire
+# commentaire
+
+DBT;
+DBC 2;
+DAL 128;
+ATT 40;
+DET 128;
+ATT 40;
+FBC;
+MRE 250;
+ATT 40;
+MAR;
+ATT 40;
+TRD;
+ATT 40;
+TRG;
+ATT 40;
+MAV 250;
+ATT 40;
+MAR;
+DBC 2;
+DAL 128;
+ATT 40;
+DET 128;
+ATT 40;
+FBC;
+FIN;
