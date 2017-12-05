@@ -1,3 +1,10 @@
+* Credits
+Anes Belfodil
+[David Garnier](https://github.com/DIGarnier) 
+Samuel D'Amours-Fortier
+Mohamed Lamine Trad
+
+
 * Utilisation du Makefile:
 
 - "make mem" :
