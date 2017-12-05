@@ -1,6 +1,6 @@
 * Credits
 Anes Belfodil
-[David Garnier](https://github.com/DIGarnier) 
+[David Garnier] 
 Samuel D'Amours-Fortier
 Mohamed Lamine Trad
 
@@ -27,3 +27,6 @@ Mohamed Lamine Trad
 
 - "make install project=nom_du_projet"
 	charge le programme "nom_du_projet" dans le robot.
+
+
+[David Garnier]: https://github.com/DIGarnier 
