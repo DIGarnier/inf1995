@@ -1,5 +1,8 @@
-# Credits
-Anes Belfodil
+# Architecture logicielle d'un robot suiveur de ligne
+###  Software architecture of a line following robot
+  
+## Credits
+[Anes Belfodil](https://github.com/abelfodil)
 
 [David Garnier](https://github.com/DIGarnier)
 
@@ -8,7 +11,7 @@ Samuel D'Amours-Fortier
 Mohamed Lamine Trad
 
 
-# Utilisation du Makefile:
+## Utilisation du Makefile:
 
 * "make mem" :
 
